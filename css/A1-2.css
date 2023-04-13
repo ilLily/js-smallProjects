@@ -1,0 +1,47 @@
+/* ==========A1-2__Print Tree========== */
+#A1-2 {
+  background-image: url(../img/tree.avif);
+  background-size: cover;
+}
+.treeBox {
+  display: flex;
+}
+.treegame h3 {
+  font-size: 3rem;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.treeBox p {
+  background-color: rgba(128, 128, 128, 0.515);
+  padding: 1rem;
+  color: var(--bg-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#treeSize {
+  padding: 0.5rem;
+}
+
+.showTreeBox {
+  width: 47%;
+  background-color: rgba(255, 255, 255, 0.49);
+}
+/* use in js */
+.pTree {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.pTreeTop {
+  color: green;
+}
+
+.pTreeBtm {
+  color: rgb(97, 26, 26);
+}

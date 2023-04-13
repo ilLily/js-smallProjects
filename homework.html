@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS homework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+  <header>
+    <div id="navBtn" onclick="toggleNav()"></div>
+
+    <div class="headerBox">
+      <nav class="flex">
+        <h1 id="logo" onclick="switchPage(this)" data="A1-0" class="childMiddle">
+          LK
+        </h1>
+        <ul class="navList">
+          <li>
+            <a href="#" data="A1-1" onclick="switchPage(this)">計算BMI</a>
+          </li>
+          <li>
+            <a href="#" data="A1-2" onclick="switchPage(this)">畫出小樹</a>
+          </li>
+          <li>
+            <a href="#" data="A1-3" onclick="switchPage(this)">猜數字遊戲</a>
+          </li>
+          <li>
+            <a href="#" data="A1-4" onclick="switchPage(this)">判斷閏/平年</a>
+          </li>
+          <li>
+            <a href="#" data="A1-5" onclick="switchPage(this)">九九乘法表</a>
+          </li>
+          <li>
+            <a href="#" data="A1-6" onclick="switchPage(this)">表單檢查</a>
+          </li>
+          <li>
+            <a href="#" data="A1-7" onclick="switchPage(this)">評點星星</a>
+          </li>
+          <li>
+            <a href="#" data="A1-8" onclick="switchPage(this)">年齡記算</a>
+          </li>
+          <li>
+            <a href="#" data="A1-9" onclick="switchPage(this)">攝氏華氏換算</a>
+          </li>
+          <li><a href="#" data="A1-10" onclick="switchPage(this)">年曆</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <!-- ======A1-0 home 輪播===== -->
+  <section id="A1-0" class="container">
+    <div class="container2 slideBox">
+      <div class="wallLinks ">
+        <!-- homeWall -->
+        <div class="aboutMe wallBox">
+          <div class="aboutmeInfo childMiddle">
+            <h2>歡迎參觀<span> 郭宜零 </span>的小作品</h2>
+            <p>請選擇您想玩一玩的項目</p>
+            <p>MFEE36 no.03 (2023/04/04)</p>
+          </div>
+          <img src="./img/Lk.jpeg" alt="" />
+        </div>
+        <!-- ispanWall -->
+        <div class="ispanBox wallBox">
+          <div class="wallInfo childMiddle">
+            <h2>我的學校：資展國際</h2>
+          </div>
+          <a href="https://www.ispan.com.tw/ " class="ispanLink"></a>
+        </div>
+        <!-- thirdWall -->
+        <div class="unsplashBox wallBox ">
+          <div class="wallInfo childMiddle">
+            <h2>引用圖庫:UNSPLASH</h2>
+          </div>
+          <a href="https://unsplash.com/" class="unSplashLink"></a>
+        </div>
+      </div>
+      <div class="wallBtns">
+        <ul>
+          <li class="wallbtn" wBtnIndex="0" onclick="moveSlide(this)">&lt;</li>
+          <li class="wallbtn" wBtnIndex="0" onclick="moveSlide(this)">1</li>
+          <li class="wallbtn" wBtnIndex="1" onclick="moveSlide(this)">2</li>
+          <li class="wallbtn" wBtnIndex="2" onclick="moveSlide(this)">3</li>
+          <li class="wallbtn" wBtnIndex="2" onclick="moveSlide(this)">&gt</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-1 算BMI===== -->
+  <section id="A1-1" class="container displayNone">
+    <div class="container2 bmi">
+      <div class="box-50 childMiddle">
+        <div id="bmiInfo" class="displayNone">
+          <p>您的BMI是 : <span id="bmi"></span></p>
+          <p id="bmiMsg"></p>
+        </div>
+      </div>
+      <div class="box-50 childMiddle game">
+        <form action="#">
+          <div>
+            <label for="height">輸入身高:</label>
+            <input type="number" id="height" name="height" />
+          </div>
+          <div>
+            <label for="weight">輸入體重:</label>
+            <input type="number" id="weight" name="weight" />
+          </div>
+          <input type="submit" id="bmiBtn" class="btn" value="按我計算BMI" onclick="calcBmi(event)" />
+
+          <table class="bmiTable">
+            <tr>
+              <th>BMI&lt;18.5</th>
+              <th>27≦BMI&lt;30</th>
+            </tr>
+            <tr>
+              <td>過輕</td>
+              <td>輕度肥胖</td>
+            </tr>
+            <tr>
+              <th>18.5≦BMI&lt;24</th>
+              <th>30≦BMI&lt;35</th>
+            </tr>
+            <tr>
+              <td>正常</td>
+              <td>中度肥胖</td>
+            </tr>
+            <tr>
+              <th>24≦BMI&lt;27</th>
+              <th>BMI≧35</th>
+            </tr>
+            <tr>
+              <td>過重</td>
+              <td>重度肥胖</td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-2畫小樹====== -->
+  <section id="A1-2" class="container displayNone">
+    <div class="container2 treeBox">
+      <div class="box-50 childMiddle treegame">
+        <h3>畫小樹</h3>
+        <form>
+          <p>請選擇一個數字</p>
+          <select name="treeSize" id="treeSize">
+            <option value="9">9</option>
+            <option value="11">11</option>
+            <option value="13">13</option>
+            <option value="15">15</option>
+            <option value="17">17</option>
+            <option value="19">19</option>
+          </select>
+          <input type="submit" onclick="makeTree(event)" class="btn" value="按我畫小樹" />
+        </form>
+      </div>
+      <div class="box-50 childMiddle showTreeBox">
+        <div id="printTree"></div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- ======A1-3猜數字遊戲====== -->
+  <section id="A1-3" class="container displayNone">
+    <div class="container2 childMiddle">
+      <div class="numGameBox">
+        <!-- 初始畫面 -->
+        <div class="numStart childMiddle">
+          <h3 class="startMsg">猜數字遊戲</h3>
+          <button class="startBtn" onclick="startNumGame()">開始遊戲</button>
+        </div>
+        <!-- 遊戲畫面 -->
+        <div class="playGame childMiddle invisable">
+          <!-- 遊戲訊息 -->
+          <p id="gameMsg">請輸入數字(1~100)</p>
+          <div class="getNum">
+            <input type="number" id="getNum" onkeyup="goNumGame(event)" />
+          </div>
+
+          <input type="submit" value="送出" onclick="goNumGame(event) " class="btn" />
+          <p>輸入"0"結束遊戲</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-4判斷閏年====== -->
+  <section id="A1-4" class="container displayNone">
+    <div class="container2 leapCheck">
+      <div class="box-50 childMiddle leapMsg">
+        <div class="card childMiddle">
+          <div>
+            <p id="showYear"></p>
+            <p id="showYearResult"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-50 childMiddle leapGame">
+        <h3>平年? 閏年?</h3>
+
+        <input type="number" id="getYear" min="1" onkeyup="yearCheckPress(event)" placeholder="按此處，輸入西元年(ex:2023)" />
+        <input type="submit" value="送出" onclick="yearCheckPress(event)" class="btn" />
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-5九九乘法表====== -->
+  <section id="A1-5" class="container displayNone">
+    <div class="container2 table99">
+      <h3>九九乘法表</h3>
+      <table>
+        <tr>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+        </tr>
+        <tr id="timeRow"></tr>
+      </table>
+    </div>
+  </section>
+  <!-- ======A1-6表單檢查====== -->
+  <section id="A1-6" class="container displayNone">
+    <div class="container2 myForm">
+      <form action="" class="formCheck">
+        <fieldset>
+          <legend>表單檢查</legend>
+          <div class="formInputs">
+            <label for="name">姓名:</label>
+            <input type="text" name="name" id="name" value="" placeholder="請輸入姓名" oninput="nameChange()" />
+            <span id="nameCheckMsg"></span>
+            <p>(1.不可空白 2.至少兩個字以上 3.必需全為中文字)</p>
+          </div>
+          <div class="formInputs">
+            <label for="password">密碼:</label>
+            <input type="password" name="password" id="password" placeholder="請輸入密碼" oninput="pwdChange(event)" />
+            <span id="pwdCheckMsg"></span>
+            <p>(1.不可空白 2.至少6個字必須包含英數字、特殊字元[!@#$%^&*])</p>
+          </div>
+          <div class="formInputs">
+            <label for="date">日期:</label>
+            <input type="text" name="date" id="formDate" placeholder="yyyy/mm/dd" oninput="dateChange()" />
+            <span id="dateCheckMsg"></span>
+            <p>格式:西元年/月/日(yyyy/mm/dd)</p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+  <!-- ======A1-7點評星星====== -->
+  <section id="A1-7" class="container displayNone">
+    <div class="container2 childMiddle stars">
+      <h2>點評星星</h2>
+      <p>單擊星星可評分，雙擊星星重置</p>
+
+      <div id="rateStars">
+        <i class="fa-regular fa-star" star="1" onclick="rate(this)" ondblclick="rateReset()"></i>
+        <i class="fa-regular fa-star" star="2" onclick="rate(this)" ondblclick="rateReset()"></i>
+        <i class="fa-regular fa-star" star="3" onclick="rate(this)" ondblclick="rateReset()"></i>
+        <i class="fa-regular fa-star" star="4" onclick="rate(this)" ondblclick="rateReset()"></i>
+        <i class="fa-regular fa-star" star="5" onclick="rate(this)" ondblclick="rateReset()"></i>
+      </div>
+      <p id="rateMsg">評分為⋯⋯</p>
+    </div>
+  </section>
+  <!-- ======A1-8年齡記算====== -->
+  <section id="A1-8" class="container displayNone">
+    <div class="container2 birthday">
+      <div class="box-50 childMiddle bdgame">
+        <h3 id="showAge">請輸入生日</h3>
+        <input type="date" id="getbd" />
+        <input type="submit" value="按我 計算年齡" onclick="getBd(event)" class="btn" />
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-9 華氏攝氏換算====== -->
+  <section id="A1-9" class="container displayNone">
+    <div class="container2 flex">
+      <div class="box-40"></div>
+      <div class="box-60 childMiddle">
+        <div class="tempcalc childMiddle ctoF">
+          <p id="cToFResult" class="fccfResult"></p>
+          <input type="number" id="cTemp" class="fccfInput" placeholder="請輸入 攝氏(℃)" onkeyup="calcCtoF(event)" />
+          <input type="button" value="換算" class="fccfBtn" onclick="calcCtoF(event)" />
+        </div>
+        <div class="tempcalc childMiddle">
+          <p id="fToCResult" class="fccfResult"></p>
+          <input type="number" id="fTemp" class="fccfInput" placeholder="請輸入 華氏(°F)" onkeyup="calcFtoC(event)" />
+          <input type="button" value="換算" class="fccfBtn" onclick="calcFtoC(event)" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======A1-10 年曆====== -->
+  <section id="A1-10" class="container displayNone">
+    <div class="container2 myCalender">
+      <div class="blankBox"></div>
+      <div class="childMiddle calender">
+        <h2>2010~ 2025 日曆</h2>
+        <!-- 日期選擇器 -->
+        <div class="dateSelector">
+          <!-- 選年 -->
+          <select name="calYear" id="calYear" onchange="createDay()">
+            <option value="year">--年份</option>
+          </select>
+          <span>年</span>
+          <!-- 選月 -->
+          <select name="calMonth" id="calMonth" onchange="createDay()">
+            <option value="month">--月份</option>
+          </select>
+          <span>月</span>
+          <!-- 選日 -->
+          <select name="calDay" id="calDay" onchange="makeCal()">
+            <option value="default">--日期</option>
+          </select>
+          <span>日</span>
+        </div>
+        <p id="calMsg">請選擇 年/月/日</p>
+        <!-- 月曆顯示區 -->
+        <table id="calTable" class="calTable"></table>
+      </div>
+    </div>
+  </section>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xregexp/3.2.0/xregexp-all.min.js"></script> -->
+  <script src="./homework.js"></script>
+</body>
+
+</html>

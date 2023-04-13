@@ -1,0 +1,35 @@
+.formCheck {
+  padding: 1rem;
+}
+.formCheck fieldset {
+  border: 0.5rem double var(--color3);
+  padding: 2rem;
+  /* height: 100%; */
+}
+.formCheck legend {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 1.5rem;
+  /* color: var(--color3); */
+}
+
+.formInputs {
+  margin: 0 2rem 2rem 2rem;
+}
+.formInputs label {
+  font-size: 1.5rem;
+}
+.formInputs input {
+  width: 15rem;
+  padding: 0.5rem;
+}
+.formInputs span {
+  color: rgb(182, 27, 61);
+}
+
+.formInputs p {
+  color: var(--color3);
+  padding: 0.5rem 0;
+
+  border-bottom: 1px dashed gray;
+}

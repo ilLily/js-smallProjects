@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Noto+Sans+TC:wght@400;700&display=swap");
+
+/* font-family: 'Caveat', cursive;
+font-family: 'Noto Sans TC', sans-serif; */
+:root {
+  --bg-color: #fcfffd;
+  --color1: #daffef;
+  --color2: #c0fdfb;
+  --color3: #64b6ac;
+  --text-color: #5d737e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2rem;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 62rem;
+  width: 70%;
+  height: 80vh;
+  margin: auto;
+  /* border: 1px solid green; */
+  /* padding: 1.25rem 0; */
+  background-color: var(--bg-color);
+}
+.container2 {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid orange; */
+}
+
+.flex {
+  display: flex;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+.pAbsolute {
+  position: absolute;
+}
+.invisable {
+  visibility: hidden;
+  z-index: -1;
+}
+
+.childMiddle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.box-50 {
+  padding: 1rem;
+  width: 50%;
+  /* border: 1px solid red; */
+}
+.box-40 {
+  padding: 1rem;
+  width: 40%;
+  /* border: 1px solid red; */
+}
+.box-60 {
+  padding: 1rem;
+  width: 60%;
+  /* border: 1px solid red; */
+}
+
+.rightBox {
+  width: 50%;
+}
+
+.btn {
+  padding: 0.4rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+/*============ header=========== */
+
+.headerBox {
+  max-width: 62rem;
+  width: 70%;
+  height: 18vh;
+  margin: auto;
+}
+nav {
+  height: 100%;
+  position: relative;
+}
+#logo {
+  width: 6rem;
+  height: 82%;
+  border-radius: 0.3rem;
+  border: 5px double var(--text-color);
+  align-self: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#navBtn {
+  display: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 0.3rem;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  background-color: #5d737ed0;
+  box-shadow: inset -5px -5px 10px rgb(114, 114, 114),
+    5px 5px 10px rgb(175, 175, 175);
+  border-radius: 50%;
+  z-index: 99;
+}
+#navBtn:after {
+  content: "";
+  position: absolute;
+  top: 1.75rem;
+  left: 1.5rem;
+  width: 2rem;
+  height: 0.3rem;
+  border-top: 0.9rem double var(--bg-color);
+  border-bottom: 0.3rem solid var(--bg-color);
+}
+/* #navBtn:before {
+  content: "X";
+  position: absolute;
+  top: 0.9rem;
+  left: 1.8rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--bg-color);
+} */
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  list-style: none;
+  /* border: 1px solid red; */
+}
+
+.navList li {
+  width: 19%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid pink; */
+}
+
+.navList li a {
+  text-decoration: none;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.6rem 0rem;
+  border: none;
+  border-radius: 0.3rem;
+  margin-bottom: 0.1rem;
+  /* border: 1px solid gray; */
+}
+.navList i {
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,87 @@
+/* ==========A1-1__BMI========== */
+
+#A1-1 {
+  background-image: url(../img/checkbmi.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bmi {
+  display: flex;
+}
+
+#bmiInfo {
+  width: 80%;
+  background-color: #fcfef3dc;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 5px rgb(184, 184, 184);
+}
+
+#bmiInfo p {
+  text-align: center;
+}
+
+#bmi {
+  font-size: 1.3rem;
+}
+
+#bmiMsg {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color3);
+}
+
+.bmi .game {
+  /* background-color: var(--color1); */
+  flex-direction: column;
+  border: 0.5rem double var(--color3);
+  justify-content: space-evenly;
+}
+
+.bmi .game h3 {
+  background-color: var(--color3);
+  padding: 0.5rem;
+  font-size: 2rem;
+  color: var(--bg-color);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.bmi label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  /* border: 1px solid green; */
+}
+
+.bmi input[type="submit"] {
+  display: block;
+  margin: 1.5rem auto;
+  background-color: var(--color3);
+  padding: 0.5rem 1.7rem;
+  font-size: 2rem;
+  color: var(--bg-color);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.bmiTable {
+  margin: auto;
+  border-collapse: collapse;
+  box-shadow: 1px 0px 3px rgb(226, 225, 225);
+}
+
+.bmiTable th,
+.bmiTable td {
+  font-weight: normal;
+  width: 9rem;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 2px 0;
+  box-shadow: 1px 0px 2px rgb(226, 225, 225);
+}
+
+.bmiTable th {
+  background-color: var(--color1);
+}

@@ -1,0 +1,61 @@
+#A1-10 {
+  background-image: url(../img/calender.jpeg);
+  background-size: cover;
+  /* background-position: top right; */
+}
+.myCalender {
+  display: flex;
+}
+.blankBox {
+  width: 46%;
+}
+
+.calender {
+  width: 50%;
+  height: 100%;
+  background-color: #fcfffd88;
+}
+.calender h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+.dateSelector {
+  display: flex;
+  justify-content: center;
+}
+.calender p {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(156, 42, 42);
+}
+.calender select {
+  padding: 0.3rem;
+}
+.calender span {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+.calTable {
+  width: 90%;
+  height: 15rem;
+  /* border: 1px solid red; */
+  margin-top: 2rem;
+}
+
+.calTable th {
+  width: 14%;
+  background-color: var(--color3);
+  color: var(--bg-color);
+}
+.calTable td {
+  background-color: white;
+  color: var(--text-color);
+  text-align: right;
+}
+
+#chosenDate {
+  background-color: rgb(231, 231, 231);
+}
